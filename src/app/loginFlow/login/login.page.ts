@@ -27,8 +27,15 @@ export class LoginPage implements OnInit {
 
   async submit(value) {
     console.log(value);
-    this.navCtrl.navigateRoot('home');
-    this.toast.presentToast('You have successfully singed in');
+     if(value.username == 'HoneyWellTask' && value.password =='Honeywell@123'){
+      this.navCtrl.navigateRoot('home');
+      this.toast.presentToast('You have successfully singed in');
+    }
+    else{
+      this.toast.alertMessage('Enter User Name or Password Incorrcet');
+      this.loginForm.reset();
+    }
+    
   }
 
 }
