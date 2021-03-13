@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list class="userNameCss">
+          <ion-list-header>UserName</ion-list-header>
+          <ion-note>8459875336</ion-note>
+        </ion-list>
+        <ion-list class="pageListCss">
+          <ion-menu-toggle autoHide="false" *ngFor="let item of pageList">
+            <ion-item (click)="openPage(item.pageUrl)" lines="none">
+              <ion-icon name={{item.icon}} slot="start"></ion-icon>
+              <h6>{{item.name}}</h6>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle autoHide="false">
+            <ion-item (click)="logout()" lines="none">
+              <ion-icon name="log-out-outline" slot="start"></ion-icon>
+              <h6>Logout</h6>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,48 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ion-app.md,
+.label-md,
+ion-app.ios,
+.label-ios,
+span,
+td,
+tr,
+th {
+  --ion-font-family: "Poppins", sans-serif;
+}
+.header-md::after {
+  background-image: none;
+}
+.pageListCss {
+  ion-icon {
+    margin-inline-end: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 25px;
+    color: #747e82;
+    font-weight: 600;
+  }
+  h6 {
+    margin-top: 12px;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+.userNameCss {
+  ion-list-header {
+    min-height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  ion-note {
+    padding-left: 16px;
+  }
+}

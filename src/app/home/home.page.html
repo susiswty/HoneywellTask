@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding ion-margin-vertical">
+    <ion-row class="allmilk">
+      <ion-col size="12">
+        <ion-row>
+          <ion-col size="12" class="displayFlex">
+            <ion-slides [options]="slideOptsMilk">
+              <ion-slide *ngFor="let item of milkSlide">
+                <ion-card>
+                  <img *ngIf="item.offerFlag == '1'" src='/assets/imgs/offers.png' class="offer">
+                  <ion-card-header class="headerCss">
+                    <img src={{item.img}}>
+                  </ion-card-header>
+                  <ion-card-content class="ion-text-left">
+                    <span>{{item.name}}</span>
+                    <h3>{{item.title}}</h3>
+                    <h5>{{item.ml}}</h5>
+                    <h6 class="rupeeBlack"><img src="/assets/imgs/rupeeBlack.png">{{item.rupee}}</h6>
+                  </ion-card-content>
+                  <ion-footer class="buyOnce" (click)="gotoCart()">
+                    <ion-button fill="clear" expand="full">BUY ONCE</ion-button>
+                  </ion-footer>
+                </ion-card>
+              </ion-slide>
+            </ion-slides>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

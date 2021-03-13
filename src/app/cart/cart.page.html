@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <h4>1 Cart Item</h4>
+    <ion-row>
+      <ion-col size="12" class="subcribeCss ion-no-padding">
+        <ion-card>
+          <ion-row>
+            <ion-col size="3">
+              <img src="/assets/imgs/milk1.png">
+            </ion-col>
+            <ion-col size="9">
+              <span>Aavin</span>
+              <h3>Pasteurised Toned Milk</h3>
+              <h5>50 ml</h5>
+              <h6 class="rupeeBlack"> <strong><img src="/assets/imgs/rupeeBlack.png">{{this.amount}}</strong>
+              </h6>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="count ion-text-right">
+              <ion-button (click)="remove()">
+                <ion-icon name="remove-outline"></ion-icon>
+              </ion-button> <span>{{this.itemList}}</span>
+              <ion-button (click)="add()">
+                <ion-icon name="add-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <h4>Order Summary</h4>
+    <ion-row class="orderSummary">
+      <ion-col size="12">
+        <ion-row class="total">
+          <ion-col size="6" class="ion-no-padding ion-text-left">
+            <h5>Sub Total :</h5>
+            <h5>Service Charge :</h5>
+          </ion-col>
+          <ion-col size="6" class="ion-no-padding ion-text-right">
+            <h6 class="rupeeBlack"> <strong><img src="/assets/imgs/rupeeBlack.png">21.5</strong></h6>
+            <h6 class="rupeeBlack"> <strong><img src="/assets/imgs/rupeeBlack.png">2*</strong></h6>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6" class="ion-text-left ion-no-padding">
+            <h6> <strong>Total</strong></h6>
+          </ion-col>
+          <ion-col size="6" class="ion-text-right ion-no-padding">
+            <h6 class="rupeeBlack"> <strong><img src="/assets/imgs/rupeeBlack.png">21.5</strong></h6>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

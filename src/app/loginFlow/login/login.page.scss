@@ -1,0 +1,48 @@
+ion-item {
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+ion-item {
+    --border-color: var(
+        --ion-item-border-color,
+        var(--ion-border-color, var(--ion-color-step-150, rgb(0, 137, 123)))
+    );
+    --inner-padding-end: 5px;
+    --inner-border-width: 0 0 1px 0;
+    --padding-start: 0px;
+}
+
+:host {
+    --border-radius: 10px;
+}
+
+ion-input {
+    --placeholder-color: #808080;
+    font-size: 16px;
+}
+
+ion-button {
+    --background: #8bc34a !important;
+    height: 2.5rem;
+    --border-radius: 5px !important;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.forgotCss {
+    --background: transparent !important;
+    color: #000 !important;
+    float: right !important;
+    margin: 0px !important;
+    font-weight: 400;
+    padding: 0 0.1em;
+    font-size: 17px;
+    letter-spacing: 0px !important;
+}
+h6 {
+    margin-bottom: 0px;
+    margin-top: 0.9rem;
+    font-size: 14px;
+    font-weight: 400;
+}
